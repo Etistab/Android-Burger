@@ -17,6 +17,7 @@ import java.net.URL
 import android.support.v7.app.AlertDialog
 import com.example.burger_app.infrastructure.BurgerDatabase
 import com.example.burger_app.infrastructure.Json
+import org.jetbrains.anko.uiThread
 
 
 class MenuActivity : AppCompatActivity() {
@@ -85,7 +86,10 @@ class MenuActivity : AppCompatActivity() {
 
                 // send categories to recycler view
                 val categories = Gson().fromJson(response, Array<Category>::class.java)
-                success(categories)
+
+                uiThread {
+                    success(categories)
+                }
             } catch (e: Exception) {
                 Log.d("EXCEPTION", e.toString())
             }
@@ -102,7 +106,10 @@ class MenuActivity : AppCompatActivity() {
 
             // send categories to recycler view
             val categories = Gson().fromJson(json, Array<Category>::class.java)
-            success(categories)
+
+            uiThread {
+                success(categories)
+            }
         }
     }
 
