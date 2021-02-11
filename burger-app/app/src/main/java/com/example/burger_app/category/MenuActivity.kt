@@ -43,7 +43,7 @@ class MenuActivity : AppCompatActivity() {
             this.adapter.updateData(this.categories)
 
             if(this.categories.isEmpty()) {
-                printAlert("Aucune donnée n'a été trouvée")
+                printAlert("Aucune catégorie n'a été trouvée")
             }
         }
     }
