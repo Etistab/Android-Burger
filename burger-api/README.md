@@ -14,13 +14,6 @@ It has 3 modes:
 
 ## Installation
 
-### Prerequisites
-
-- Clone the repos with a git client.
-
-```bash
-git clone https://github.com/TheGhostSpirit/burger-api.git
-```
 
 ### Register an application in Azure
 

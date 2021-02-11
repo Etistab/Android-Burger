@@ -25,7 +25,7 @@ class MenuActivity : AppCompatActivity() {
 
     private var categories: Array<Category> = arrayOf()
 
-    private val baseURL = getString(R.string.api_base_url)
+    private val baseURL = "http://10.0.2.2:3000"
     private val adapter = CategoryAdapter(categories)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,11 @@ class MenuActivity : AppCompatActivity() {
 
         getCategories{ categories: Array<Category> ->
             this.categories = categories
-            this.adapter.updateData(categories)
+            this.adapter.updateData(this.categories)
+
+            if(this.categories.isEmpty()) {
+                printAlert("Aucune donnée n'a été trouvée")
+            }
         }
     }
 
