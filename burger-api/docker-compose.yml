@@ -1,0 +1,20 @@
+version: '3.6'
+services:
+  database:
+    container_name: burger-database
+    image: mongo:4.2.3
+    ports:
+      - "${MONGO_PORT}:27017"
+    env_file:
+      - .env
+  api:
+    container_name: burger-api
+    image: node:13.12-alpine
+    ports:
+      - "${NODE_PORT}:${NODE_PORT}"
+    volumes:
+      - '.:/app'
+    env_file:
+      - .env
+    working_dir: /app
+    entrypoint: sh -c "npm i && npm start"

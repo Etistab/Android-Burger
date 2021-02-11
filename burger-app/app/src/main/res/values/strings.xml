@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">burger-app</string>
+    <string name="restaurant_name">Restaurant Le Big Burger</string>
+
+
+    <string name="api_base_url">http://10.0.2.2:3000</string>
+</resources>

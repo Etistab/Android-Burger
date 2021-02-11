@@ -1,0 +1,165 @@
+openapi: 3.0.0
+info:
+  title: burger api
+  version: '1.0'
+  description: ''
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/products/{product-id}':
+    parameters:
+      - schema:
+          type: string
+        name: product-id
+        in: path
+        required: true
+    delete:
+      summary: ''
+      operationId: delete-product-product-id
+      responses:
+        '200':
+          description: OK
+    get:
+      summary: ''
+      operationId: get-product-product-id
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: ''
+      operationId: put-products-product-id
+      responses:
+        '200':
+          description: OK
+  '/menus/{menu-id}':
+    parameters:
+      - schema:
+          type: string
+        name: menu-id
+        in: path
+        required: true
+    delete:
+      summary: ''
+      operationId: delete-menu-menu-id
+      responses:
+        '200':
+          description: OK
+    get:
+      summary: ''
+      operationId: get-menu-menu-id
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: ''
+      operationId: put-menus-menu-id
+      responses:
+        '200':
+          description: OK
+  '/special-offers/{special-offers-id}':
+    parameters:
+      - schema:
+          type: string
+        name: special-offers-id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-promotion-a-promotion-id
+    delete:
+      summary: ''
+      operationId: delete-promotion-a-promotion-id
+      responses:
+        '200':
+          description: OK
+  '/categories/{category-id}':
+    parameters:
+      - schema:
+          type: string
+        name: category-id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-category-category-id
+      parameters: []
+    delete:
+      summary: ''
+      operationId: delete-category-category-id
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: ''
+      operationId: put-categories-category-id
+      responses:
+        '200':
+          description: OK
+  '/orders/{order-id}':
+    parameters:
+      - schema:
+          type: string
+        name: order-id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-orders-order-id
+    delete:
+      summary: ''
+      operationId: delete-orders-order-id
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: ''
+      operationId: put-orders-order-id
+      responses:
+        '200':
+          description: OK
+  /categories:
+    post:
+      summary: ''
+      operationId: post-category
+      responses:
+        '200':
+          description: OK
+    parameters: []
+  /menus:
+    post:
+      summary: ''
+      operationId: post-menu
+      responses:
+        '200':
+          description: OK
+    parameters: []
+  /orders:
+    post:
+      summary: ''
+      operationId: post-orders
+      responses:
+        '200':
+          description: OK
+  /products:
+    post:
+      summary: ''
+      operationId: post-product
+      responses:
+        '200':
+          description: OK
+    parameters: []
+  /special-offers:
+    post:
+      summary: ''
+      operationId: post-special-offers
+      responses:
+        '200':
+          description: OK
+components:
+  schemas: {}
