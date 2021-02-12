@@ -14,8 +14,8 @@ class ProductAdapter(private val products: Array<ProductListActivity.Product>) :
 
     override fun onBindViewHolder(holder: ProductHolder, position: Int)
     {
-        val user: ProductListActivity.Product = products[position]
-        holder.bind(user)
+        val product: ProductListActivity.Product = products[position]
+        holder.bind(product)
     }
 
     override fun getItemCount(): Int = products.size

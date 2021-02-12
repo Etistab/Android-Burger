@@ -11,7 +11,7 @@ import { Category } from './category';
 const newSchema = yup.object().shape<Category>(
   {
     name: yup.string().required(),
-    image: yup.string().url().required(),
+    image: yup.string().required(),
     description: yup.string().required()
   }
 );
@@ -22,7 +22,7 @@ const newSchema = yup.object().shape<Category>(
 const updateSchema = yup.object().shape<Partial<Category>>(
   {
     name: yup.string(),
-    image: yup.string().url(),
+    image: yup.string(),
     description: yup.string()
   }
 ).test(notEmptyObject);

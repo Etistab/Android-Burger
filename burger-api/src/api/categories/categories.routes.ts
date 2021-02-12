@@ -17,10 +17,7 @@ const routes: Route[] = [
   {
     method: 'post',
     path: '/',
-    handler: categoryController.create,
-    options: {
-      admin: true
-    }
+    handler: categoryController.create
   },
   {
     method: 'put',

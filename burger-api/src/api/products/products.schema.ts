@@ -11,9 +11,9 @@ const newSchema = yup.object().shape<Product>(
   {
     name: yup.string().required(),
     price: yup.number().min(0).required(),
-    image: yup.string().url().required(),
+    image: yup.string().required(),
     description: yup.string().required(),
-    calories: yup.number().min(0).required()
+    calories: yup.number().min(0)
   }
 );
 
@@ -24,7 +24,7 @@ const updateSchema = yup.object().shape<Product>(
   {
     name: yup.string(),
     price: yup.number().min(0),
-    image: yup.string().url(),
+    image: yup.string(),
     description: yup.string(),
     calories: yup.number().min(0)
   }

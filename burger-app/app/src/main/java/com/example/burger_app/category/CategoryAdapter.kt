@@ -14,8 +14,8 @@ class CategoryAdapter(private var categories: Array<MenuActivity.Category>) : Re
 
     override fun onBindViewHolder(holder: CategoryHolder, position: Int)
     {
-        val user: MenuActivity.Category = categories[position]
-        holder.bind(user)
+        val category: MenuActivity.Category = categories[position]
+        holder.bind(category)
     }
 
     override fun getItemCount(): Int = categories.size
